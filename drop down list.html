@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>drop down list</title>
+       <link href="css/styel.css" rel="stylesheet" />
+		
+    </head>
+    <style>
+        .select{
+            height: 80vh;
+           
+        }
+    </style>
+    <body> 
+              <h1>Country</h1>
+
+        <div class="col-sm-12 bg-light p-4">
+            <select id="changeCountry">
+                <option value="Yemen">Yemen</option>
+                <option value="Egypt">Egypt</option>
+
+            </select>
+        </div>
+        <div class="col-sm-12 bg-light p-4">
+            
+            <select id="changeCity">
+                <option value="Yemen">Sana'a</option>
+                <option value="Yemen">Aden</option>
+                <option value="Yemen">Taiz</option>
+
+                <option value="Egypt">Cairo</option>
+                <option value="Egypt">Alexandria</option>
+                <option value="Egypt">Sharm El-shaikh</option>
+
+            </select>
+        </div>
+        <div id="img-div" class="select">
+        <img id="myImg" src="img/Yemen/1.jpg" alt="1" width="50%" height="50%">
+        <img id="myImg" src="img/Yemen/2.jpg" alt="1" width="50%" height="50%">
+        <img id="myImg" src="img/Yemen/3.jpg" alt="1" width="50%" height="50%">
+        </div>
+        
+
+      
+    <script>
+            var x=document.getElementById("changeCountry");
+            var y=document.getElementById("changeCity");
+            var z=document.getElementById("img-div");
+            x.addEventListener("change",function(){
+              if( x.value=="Yemen"){
+                 if(y.value=="Sana'a"){
+                     z.src="img/Yemen/1.jpg";
+                     z.src="img/Yemen/2.jpg";
+                     z.src="img/Yemen/3.jpg";
+
+                 }
+                 else  if(y.value=="Aden"){
+                    z.src="img/Yemen/4.jpg";
+                    z.src="img/Yemen/5.jpg";
+                    z.src="img/Yemen/6.jpg";
+                 }
+                 else {
+                    z.src="img/Yemen/7.jpg";
+                    z.src="img/Yemen/8.jpg";
+                    z.src="img/Yemen/9.jpg"; 
+                 }
+              }
+              else (x.value=="Egypt")
+              {
+                if(y.value=="Cairo"){
+                    z.src="img/Egypt/1.jpg";
+                    z.src="img/Egypt/2.jpg";
+                    z.src="img/Egypt/3.jpg";
+
+                 }
+                  else if (y.value=="Alexandria"){
+                    z.src="img/Egypt/4.jpg";
+                    z.src="img/Egypt/5.jpg";
+                    z.src="img/Egypt/6.jpg";
+                 }
+                 else {
+                    z.src="img/Egypt/7.jpg";
+                    z.src="img/Egypt/8.jpg";
+                    z.src="img/Egypt/9.jpg";
+
+                 }
+              }
+            });
+
+    </script>
+    </body>
+    </html>
+    
